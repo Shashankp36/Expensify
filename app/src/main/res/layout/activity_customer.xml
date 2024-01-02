@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CustomerActivity"
+    android:background="#fafafa"
+    >
+
+
+    <RelativeLayout
+        android:id="@+id/add_transaction_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_marginBottom="5dp"
+        android:background="@color/olive_green"
+        app:layout_constraintBottom_toTopOf="@+id/labelLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/add_transaction"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/labelLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/namebox"
+        app:helperTextTextColor="@color/red"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/labelInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/person"
+            android:drawablePadding="12dp"
+            android:maxLines="1"
+            android:fontFamily="sans-serif-light" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phonebox"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/phone_numberbox"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneboxInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/phone"
+            android:drawablePadding="12dp"
+            android:fontFamily="sans-serif-light"
+            android:textColorHint="#757575"
+            android:inputType="number|numberSigned"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/amountLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Amount"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/amountInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:drawableStart="@drawable/rupee"
+            android:drawablePadding="12dp"
+            android:textColorHint="#757575"
+            android:inputType="numberDecimal|numberSigned"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descriptionLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_height="90dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Note"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/descriptionInput"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:drawableStart="@drawable/ic_baseline_note_24"
+            android:drawablePadding="12dp"
+            android:fontFamily="sans-serif-light"
+            android:textColorHint="#757575" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="120dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/received" />
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/given" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirm_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/confirm_btn"
+        android:fontFamily="@font/baloo"
+        android:text="@string/confirmbtn"
+        android:textAllCaps="false"
+        />
+</LinearLayout>

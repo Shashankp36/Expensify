@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "102122984210",
+    "firebase_url": "https://expensemanager-bd604-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "expensemanager-bd604",
+    "storage_bucket": "expensemanager-bd604.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102122984210:android:f8b560ce93ad458fa919cb",
+        "android_client_info": {
+          "package_name": "com.project.expensify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "102122984210-pn36tcmmh8i5hmp40nv977ss818f7qej.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNf4ticMzM7SVcgMNvU3KuOLhrHpPPK2M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "102122984210-pn36tcmmh8i5hmp40nv977ss818f7qej.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
